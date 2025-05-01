@@ -154,7 +154,7 @@ exports.ratingcontroller = async(req,res)=>{
 exports.getAllUsersRatingController=async(req,res)=>{
     console.log("inside gat all users Controllers");
     try {
-        const allusers = await users.find().limit(4)
+        const allusers = await users.find()
         res.status(200).json(allusers)
     } catch (error) {
         res.status(401).json(error)
